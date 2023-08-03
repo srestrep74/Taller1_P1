@@ -8,3 +8,6 @@ def home(request):
         'name' : 'Sebastian Restrepo'
     }
     return render(request, 'home.html', context)
+
+def about(request):
+    return render(request, 'about.html')
