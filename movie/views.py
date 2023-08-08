@@ -6,13 +6,8 @@ from .models import Movie
 
 def home(request):
     searchTerm = request.GET.get('searchMovie')
-    if searchTerm:
-        movies = Movie.objects.filter(title__icontains=searchTerm)
-    else:
-        movies = Movie.objects.all()
     context = {
         'searchTerm' : searchTerm,
-        'movies' : movies
     }
     return render(request, 'home.html', context)
 
