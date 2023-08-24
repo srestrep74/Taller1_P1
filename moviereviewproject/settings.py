@@ -56,7 +56,7 @@ ROOT_URLCONF = 'moviereviewproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "moviereviewproject/templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
+    os.path.join(BASE_DIR,'static'), 'moviewreviewproject/static/'
 ]
 MEDIA_URL = '/images/'
 # Default primary key field type
